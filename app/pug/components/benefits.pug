@@ -1,0 +1,16 @@
+-
+  var benefits = [
+    { img: 'img/benefits-01.png', text: '<b>Обращайтесь, <br>когда удобно вам –</b> работаем каждый день' },
+    { img: 'img/benefits-02.png', text: '<b>Экономьте за счет обоснованного торга</b> при покупке авто' },
+    { img: 'img/benefits-03.png', text: '<b>Будьте уверены в юридической чистоте,</b> даем гарантии' },
+    { img: 'img/benefits-04.png', text: '<b>Поставьте <br>транспорт на учет <br>без хлопот –</b> сопроводим в ГИБДД' },
+  ]
+
+.benefits#benefits
+  .container
+    .benefits-items
+      each item in benefits
+        .benefits__item
+          .benefits__item-image-part
+            img.benefits__item-image(src=item.img, alt='')
+          .benefits__item-text-part !{item.text}

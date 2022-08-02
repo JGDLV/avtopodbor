@@ -1,0 +1,54 @@
+-
+  var header = {
+    logo: 'img/logo.png',
+    tagline: {
+      first: 'Подбор автомобилей на вторичном рынке и в салонах.',
+      second: 'Работаем по Тюмени и остальным регионам России'
+    },
+    phone: '+7 (3452) 958-958',
+    whours: 'c 09:00 до 21:00 без выходных',
+    callback: {
+      href: '#callback',
+      text: 'Позвоните мне'
+    },
+    social: [
+      { href: '#', img: 'img/viber.svg', class: 'viber' },
+      { href: '#', img: 'img/whatsapp.svg', class: 'whatsapp' },
+    ]
+  }
+
+  var menu = [
+    { href: '#', text: 'Green Car' },
+    { href: '#', text: 'Услуги' },
+    { href: '#', text: 'Что проверяем' },
+    { href: '#', text: 'Примеры работ' },
+    { href: '#', text: 'Блог' },
+    { href: '#', text: 'Контакты' },
+  ]
+
+.header-top
+  .container
+    .header-top__inner
+      .logo
+        a(href="/")
+          img(src=header.logo, alt="")
+      .header__center
+        .header__center-top
+          .tagline
+            .tagline__first !{header.tagline.first}
+            .tagline__second !{header.tagline.second}
+          .header-social
+            each item in header.social
+              a.header-social__item(href=item.href class=item.class)
+                if item.img
+                  img.header-social__item-image(src=item.img, alt="")
+        .header__center-bottom
+          .menu
+            ul
+              each item in menu
+                li
+                  a(href=item.href) !{item.text}
+      .header__contacts
+        a.header__contacts-phone(href="tel:" + phoneFix(header.phone)) !{header.phone}
+        .header__contacts-whours !{header.whours}
+        a.callback.btn(href=header.callback.href) !{header.callback.text}

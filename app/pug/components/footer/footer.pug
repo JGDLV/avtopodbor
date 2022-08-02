@@ -1,0 +1,31 @@
+-
+  var footer = {
+    social: {
+      header: 'Мы в соцсетях:',
+      items: [
+        { href: '#', image: 'img/vk.svg', class: 'vk' },
+        { href: '#', image: 'img/instagram.svg', class: 'instagram' },
+        { href: '#', image: 'img/facebook.svg', class: 'facebook' },
+        { href: '#', image: 'img/youtube.svg', class: 'youtube' },
+        //- { href: '#', image: '', class: 'drom' },
+      ]
+    },
+    copyright: 'Copyright © GREENCAR',
+    privacy: {
+      href: '#',
+      text: 'Политика конфиденциальности'
+    }
+  }
+
+.container
+  .footer__inner
+    .footer-social
+      p.footer-social__header !{footer.social.header}
+      .footer-social-items
+        each item in footer.social.items
+          a.footer-social__item(href=item.href target="_blank" class=item.class)
+            if item.image
+              img.footer-social__item-image(src=item.image, alt="")
+    .copyright !{footer.copyright}
+    .privacy #[a(href=footer.privacy.href target="_blank") !{footer.privacy.text}]
+    .developer Разработано: #[a(href="//1ps.ru/" target="_blank") 1PS.RU]

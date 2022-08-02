@@ -1,0 +1,71 @@
+-
+  var prices = {
+    header: 'Цены на услуги автоподбора от 10 000 рублей',
+    subheader: 'Оплата наличными деньгами или переводом на карту',
+    items: [
+      {
+        img: 'img/prices-01.png',
+        header: 'Разовый осмотр авто',
+        link: '#',
+        price: '10 000'
+      },
+      {
+        img: 'img/prices-02.png',
+        header: 'Автоподбор под ключ',
+        link: '#',
+        prices: [
+          { price: '15 000', linkHref: '#', linkText: 'по Тюмени' },
+          { price: '20 000', linkHref: '#', linkText: 'по Тюмени + 1000 км' },
+          { price: '26 000', linkHref: '#', linkText: 'по всей России' },
+        ]
+      },
+      {
+        img: 'img/prices-03.png',
+        header: 'Автоэксперт на день',
+        link: '#',
+        price: '10 000'
+      },
+      {
+        img: 'img/prices-04.png',
+        header: 'Экспресс-подбор',
+        link: '#',
+        price: '10 000'
+      },
+      {
+        img: 'img/prices-05.png',
+        header: 'Перегон <br>автомобилей',
+        link: '#',
+        price: '10 000'
+      },
+      {
+        img: 'img/prices-06.png',
+        header: 'Подбор авто <br>из салона',
+        link: '#',
+        price: '10 000'
+      },
+      {
+        img: 'img/prices-07.png',
+        header: 'Дополнительные <br>услуги',
+        link: '#'
+      },
+    ]
+  }
+
+.prices#prices
+  .container
+    h2.prices__header !{prices.header}
+    p.prices__subheader !{prices.subheader}
+    .prices-items
+      each item, index in prices.items
+        .prices__item(class="prices__item_" + (index + 1))
+          .prices__item-image-part
+            img.prices__item-image(src=item.img, alt='' class="prices__item-image_" + (index + 1))
+          .prices__item-text-part
+            a(href=item.link).prices__item-header !{item.header}
+            if item.price
+              p.prices__item-price от !{item.price}
+            else if item.prices
+              each price in item.prices
+                .prices__item-price-row
+                  p.prices__item-price от !{price.price}
+                  a(href=price.linkHref).prices__item-link !{price.linkText}

@@ -1,0 +1,56 @@
+-
+  var articles = {
+    header: 'Полезное о подборе автомобилей',
+    subheader: 'Наши эксперты рассказывают, как не попасть на деньги при покупке машины',
+    items: [
+      {
+        img: 'img/articles-01.png',
+        date: '01.07.2020',
+        header: 'Заголовок статьи',
+        link: '#',
+      },
+      {
+        img: 'img/articles-02.png',
+        date: '01.07.2020',
+        header: 'Заголовок статьи',
+        link: '#',
+      },
+      {
+        img: 'img/articles-03.png',
+        date: '01.07.2020',
+        header: 'Заголовок статьи',
+        link: '#',
+      },
+      {
+        img: 'img/articles-04.png',
+        date: '01.07.2020',
+        header: 'Заголовок статьи',
+        link: '#',
+      },
+      {
+        img: 'img/articles-04.png',
+        date: '01.07.2020',
+        header: 'Заголовок статьи',
+        link: '#',
+      },
+    ],
+    link: {
+      href: '#',
+      text: 'Все статьи'
+    }
+  }
+
+.articles#articles
+  .container
+    h2.articles__header !{articles.header}
+    p.articles__subheader !{articles.subheader}
+    .articles-items.owl-carousel
+      each item in articles.items
+        .articles__item
+          a(href=item.link).articles__item-image-part
+            img.articles__item-image(src=item.img, alt='')
+          .articles__item-text-part
+            p.articles__item-date !{item.date}
+            a(href=item.link).articles__item-header !{item.header}
+    .articles-link-all
+      a.link_arrow(href=articles.link.href) !{articles.link.text}

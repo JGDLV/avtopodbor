@@ -1,0 +1,16 @@
+-
+  var callback = {
+    header: 'Обратный звонок',
+    button: 'Позвоните мне'
+  }
+
+.callback-modal.mfp-hide#callback
+  h2.callback-modal__header !{callback.header}
+  form.callback-modal-form
+    input(type="hidden" name="act" value="callback")
+    input.callback-modal-form__name(type="text" name="name" placeholder="Имя")
+    input.callback-modal-form__phone(type="text" name="phone" placeholder="Номер телефона *" required)
+    label.callback-modal-form__label.privacy_label !{inspection.label} 
+      input(type="checkbox" required)
+      a(href=inspection.privacyHref) !{inspection.privacyText}
+    button.callback-modal-form__button.btn(type="submit") !{callback.button}

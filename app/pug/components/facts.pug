@@ -1,0 +1,18 @@
+-
+  var facts = {
+    items: [
+      { img: 'img/facts-01.png', text: '5 специалистов <br>по различным автомобилям' },
+      { img: 'img/facts-02.png', text: 'Более 6 000 осмотренных и 500 подобранных машин' },
+      { img: 'img/facts-03.png', text: 'Свыше 1 млн. руб. клиенты сэкономили за счет торга' },
+      { img: 'img/facts-04.png', text: '5 лет безупречной работы на рынке автоподбора' }
+    ]
+  }
+
+.facts#facts
+  .container
+    .facts-items
+      each item in facts.items
+        .facts__item
+          .facts__item-image-part
+            img.facts__item-image(src=item.img, alt='')
+          .facts__item-text-part !{item.text}

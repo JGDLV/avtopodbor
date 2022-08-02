@@ -1,0 +1,33 @@
+-
+  var check = {
+    header: 'Отправьте VIN или ссылку <br>на понравившийся автомобиль –',
+    subheader: 'узнаем все его тайны',
+    button: 'Отправить',
+    sitesHeader: 'Где можно посмотреть объявления:',
+    sites: [
+      { img: 'img/site-01.png', link: '#' },
+      { img: 'img/site-02.png', link: '#' },
+      { img: 'img/site-03.png', link: '#' },
+    ]
+  }
+
+.check#check
+  .container
+    .check__inner
+      h2.check__header !{check.header}
+      p.check__subheader !{check.subheader}
+      form.check-form
+        input(type="hidden" name="act" value="check")
+        input.check-form__vin(type="text" name="vin" placeholder="VIN-номер автомобиля")
+        input.check-form__url(type="text" name="url" placeholder="Ссылка на объявление")
+        input.check-form__phone(type="text" name="phone" placeholder="Телефон *" required)
+        label.check-form__label.privacy_label !{inspection.label} 
+          input(type="checkbox" required)
+          a(href=inspection.privacyHref) !{inspection.privacyText}
+        button.check-form__button.btn(type="submit") !{check.button}
+        .check-form-sites
+          p.check-form-sites__header !{check.sitesHeader}
+          .check-form-sites-items
+            each site in check.sites
+              a.check-form-sites__item(href=site.link target="_blank")
+                img(src=site.img, alt="")

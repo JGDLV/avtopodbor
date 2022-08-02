@@ -1,0 +1,22 @@
+-
+  var intro = {
+    preheader: 'Служба автоподбора',
+    header: '<span class="green">green</span> car',
+    subheader: 'в Тюмени и по всей России',
+    text: 'Найдем машину вашей мечты или вернем деньги',
+    buttonHref: '#',
+    buttonText: 'Подберите мне машину',
+    image: 'img/intro-image.png'
+  }
+
+.intro#intro
+  .container
+    .intro__inner
+      .intro__text-part
+        .intro__preheader !{intro.preheader}
+        h1.intro__header !{intro.header}
+        .intro__subheader !{intro.subheader}
+        .intro__text !{intro.text}
+        a.intro__button.btn(href=intro.buttonHref) !{intro.buttonText}
+      .intro__image-part
+        img.intro__image(src=intro.image, alt="")

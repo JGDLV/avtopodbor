@@ -1,0 +1,40 @@
+-
+  var guarantees = {
+    header: 'Гарантии на подбор автомобилей',
+    subheader: 'Наша ответственность закрепляется договором',
+    items: [
+      {
+        img: 'img/guarantees-01.png',
+        header: 'Покупка машины',
+        text: 'Приобретите автомобиль к указанному в договоре сроку – если мы не подберем машину вовремя, то вернем предоплату в полном объеме'
+      },
+      {
+        img: 'img/guarantees-02.png',
+        header: 'Отсутствие неисправностей',
+        text: 'Обращайтесь в случае обнаружения технических проблем в течение одного месяца с момента покупки – мы устраним их за свой счет'
+      },
+      {
+        img: 'img/guarantees-03.png',
+        header: 'Юридическая чистота',
+        text: 'Будьте уверены, что машина не угнана и не арестована – в противной ситуации полностью компенсируем ваши убытки'
+      },
+      {
+        img: 'img/guarantees-04.png',
+        header: 'Постановка на учет',
+        text: 'Пройдите перерегистрацию без хлопот – подготовим комплект необходимых документов и сопроводим вас в ГИБДД'
+      },
+    ]
+  }
+
+.guarantees#guarantees
+  .container
+    h2.guarantees__header !{guarantees.header}
+    p.guarantees__subheader !{guarantees.subheader}
+    .guarantees-items
+      each item in guarantees.items
+        .guarantees__item
+          .guarantees__item-image-part
+            img.guarantees__item-image(src=item.img, alt='')
+          .guarantees__item-text-part
+            p.guarantees__item-header !{item.header}
+            p.guarantees__item-text !{item.text}

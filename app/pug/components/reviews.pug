@@ -1,0 +1,39 @@
+-
+  var reviews = {
+    header: 'Отзывы об автоподборе Green Car',
+    subheader: 'Работаем по Тюмени и остальным регионам России',
+    items: [
+      {
+        img: 'img/reviews-01.png',
+        name: 'Екатерина Дученко',
+        source: '#',
+        text: 'Заказали услугу эксперт на день и не пожалел, мы осмотрели семь автомобилей. В итоге мы остановили свой выбор на фольксваген поло хетчбэк. Проверка была проведена по всем параметрам, пробили по базе ГИБДД, сверили все номера, прошлись по всей машине толщиномером. Ребята отработали даже больше чем я заплатил, хочу сказать им спасибо за работу! '
+      },
+      {
+        img: 'img/reviews-01.png',
+        name: 'Екатерина Дученко',
+        source: '#',
+        text: 'Заказали услугу эксперт на день и не пожалел, мы осмотрели семь автомобилей. В итоге мы остановили свой выбор на фольксваген поло хетчбэк. Проверка была проведена по всем параметрам, пробили по базе ГИБДД, сверили все номера, прошлись по всей машине толщиномером. Ребята отработали даже больше чем я заплатил, хочу сказать им спасибо за работу! '
+      },
+    ],
+    link: {
+      href: '#',
+      text: 'Все отзывы'
+    }
+  }
+
+.reviews#reviews
+  .container
+    h2.reviews__header !{reviews.header}
+    p.reviews__subheader !{reviews.subheader}
+    .reviews-items.owl-carousel
+      each item in reviews.items
+        .reviews__item
+          .reviews__item-image-part
+            img.reviews__item-image(src=item.img, alt='')
+          .reviews__item-text-part
+            p.reviews__item-name !{item.name}
+            a(href=item.source target="_blank").reviews__item-source.fab.fa-vk
+            p.reviews__item-text !{item.text}
+    .reviews-link-all
+      a.link_arrow(href=reviews.link.href) !{reviews.link.text}

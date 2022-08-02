@@ -1,0 +1,380 @@
+@media (max-width: 1600px)
+  .intro__image-part
+    position: static
+    width: 500px
+  
+@media (max-width: 1500px) and (min-width: 1360px)
+  .parameters
+    &__item
+      width: 245px
+      &_5
+        right: 0
+      &-text-part
+        font-size: 16px
+    &__point
+      &_5
+        right: 280px
+    // padding: 30px 0
+    // height: auto
+    // background: #0e0e0e
+    // &-items
+    //   margin-top: -60px
+    //   justify-content: center
+    // &__item
+    //   position: static
+    //   width: calc(100% / 2 - 30px)
+    //   margin: 0 15px 30px
+    //   &-text-part
+    //     display: block
+    // &-points
+    //   display: none
+  
+@media (max-width: 1400px)
+  .header
+    &__center
+      width: calc(100% - 500px)
+  .intro
+    &__inner
+      justify-content: center
+  .inspection
+    padding: 30px 0
+    &__inner
+      padding: 30px
+      justify-content: center
+    &__header
+      text-align: center !important
+      line-height: normal
+    &__text
+      line-height: normal
+    &__left
+      width: 100%
+      text-align: center !important
+    &__right
+      padding-top: 30px
+      width: 100%
+  .prices
+    padding: 30px 0
+    &-items
+      justify-content: space-around
+    &__item
+      width: calc(100% / 3 - 20px)
+      margin: 0 0 100px
+      &:last-child
+        margin-bottom: 0
+      &-header
+        padding: 0 10px
+  .guarantees
+    padding: 30px 0
+  .check
+    padding: 30px 0
+  .about
+    padding: 30px 0
+    &__image-part
+      width: 100%
+      text-align: center
+      padding-top: 30px
+    &__text-part
+      width: 100%
+      br
+        display: none
+    &__button
+      margin: 30px auto 0
+  .facts
+    padding: 30px 0 0
+    &__item
+      width: calc(50% - 20px)
+      margin-bottom: 30px
+  .reviews
+    padding: 30px 0
+  .articles
+    padding: 30px 0
+  .footer
+    &__inner
+      justify-content: center
+      & > *
+        margin: 5px 20px
+  .footer-social
+    justify-content: center
+  .footer-social__header
+    margin-right: 20px
+  .we-check
+    padding: 40px 0
+
+@media (max-width: 1359px)
+  .parameters
+    padding: 30px 0
+    height: auto
+    background: #0e0e0e
+    &-items
+      margin-top: -60px
+      justify-content: center
+    &__item
+      position: static
+      width: calc(100% / 2 - 30px)
+      margin: 0 15px 30px
+      &::after
+        content: none
+      &-text-part
+        display: block !important
+    &-points
+      display: none
+  .we-check__left
+    display: none
+  .we-check__right
+    width: 100%
+    background-size: cover
+    padding: 30px
+    +flex
+      align-items: flex-start
+  .we-check__right-item
+    width: calc(100% / 3 - 30px)
+    margin: 15px
+    display: block !important
+
+@media (max-width: 1200px)
+  .header
+    padding: 30px 0
+    &-top
+      .container
+        padding: 0
+        margin-bottom: 30px
+      &__inner
+        justify-content: center
+        align-items: center
+    .logo
+      order: 0
+      margin: 0 15px 0
+    &__contacts
+      order: 1
+      margin: 0 15px 0
+      &-whours
+        margin-bottom: 20px
+    &__center
+      width: 100%
+      order: 2
+      margin: 0
+      &-top
+        display: none
+  .menu
+    background: #000
+    padding: 10px 0
+    & > ul
+      justify-content: center
+      & > li > a
+        display: block
+        padding: 10px 20px
+  .intro
+    padding: 10px 0 30px
+  .intro__preheader, .intro__subheader, .intro__text, h1, h2
+    line-height: normal !important
+    font-size: 30px !important
+  .inner-content h1,
+  .inner-content h2
+    text-align: center !important
+  .inner-content h1 + *[class*="subheader"],
+  h2 + *[class*="subheader"]
+    font-size: 20px
+    margin-top: 15px
+    line-height: normal
+    background: none
+    text-align: center !important
+    padding: 0
+    width: 100%
+    height: auto
+    display: block
+    &::before
+      content: none
+  .intro__image-part
+    display: none
+  .intro__text-part
+    width: 100%
+    text-align: center
+  .intro__button
+    margin: auto
+  .benefits
+    &__item
+      width: calc(50% - 20px)
+      margin-bottom: 30px
+  .inspection__header, .inspection__text
+    font-size: 30px
+  .inspection-form
+    justify-content: space-around
+  .guarantees__item
+    width: calc(50% - 20px)
+    margin-bottom: 30px
+  .check
+    &__inner
+      padding: 0
+    &__header
+      text-align: center
+    &-form
+      margin: auto
+  #top
+    right: 30px
+    bottom: 30px
+  .inner-content
+    padding: 30px 0
+    .about__text-part
+      padding-top: 10px
+
+@media (max-width: 1100px)
+  .team
+    padding-bottom: 0
+    &-items
+      justify-content: center
+    &__item
+      width: calc(100% / 3 - 30px)
+      margin-bottom: 30px
+
+@media (max-width: 900px)
+  .prices__item
+    width: calc(50% - 20px)
+  .reviews__item
+    text-align: center
+  .reviews__item-image-part
+    margin: auto
+  .reviews__item-text-part
+    width: 100%
+    padding: 30px 0
+    justify-content: center
+  .cta__text
+    width: 100%
+    margin-bottom: 30px
+  .cta__button
+    max-width: 100%
+    margin: auto
+  .we-check__right-item
+    width: calc(100% / 2 - 30px)
+
+@media (max-width: 800px)
+  .inspection-form__phone
+    width: 100%
+    margin-bottom: 30px
+
+@media (max-width: 790px)
+  .header__center-bottom
+    height: 0
+    padding: 0
+  .menu-toggle
+    display: flex
+    margin: 0 auto
+    position: absolute
+    top: 15px
+    right: 15px
+    z-index: 10
+    background: #000
+  .menu
+    padding: 0 !important
+    & > ul
+      overflow: hidden
+      width: 100%
+      position: absolute
+      // top: -100%
+      top: -400px
+      left: 0
+      background: #000
+      padding: 15px 0
+      +tr
+      & > li
+        width: 100%
+        & > a
+          padding: 10px 20px !important
+        & > ul
+          display: none !important
+      &.active
+        top: 0
+  .header__contacts
+    width: 100%
+    margin: 30px 0 0
+    text-align: center
+  .callback
+    margin: auto
+
+@media (max-width: 750px)
+  .three-items__item
+    width: calc(50% - 30px)
+  .team__item
+    width: calc(50% - 30px)
+  .contacts-page__left
+    margin-bottom: 30px
+  .contacts-page__left,
+  .contacts-page__right
+    width: 100%
+
+@media (max-width: 610px)
+  .guarantees__item
+    width: 100%
+  .check-form__vin, .check-form__url, .check-form__phone
+    width: 100% !important
+  .check-form-sites
+    width: 100%
+    margin-top: 30px
+    &__header
+      text-align: center
+    &-items
+      justify-content: center
+  .facts__item
+    width: 100%
+  .parameters__item
+    width: 100%
+    margin: 0 0 30px
+    &:last-child
+      margin: 0
+
+@media (max-width: 590px)
+  .intro__preheader, .intro__subheader, .intro__text
+    font-size: 20px
+  .intro__header
+    line-height: normal
+    font-size: 40px
+  .btn
+    font-size: 18px !important
+    max-width: 300px !important
+    width: auto !important
+    height: auto !important
+    padding: 10px 20px
+  input[type="text"]
+    width: 100%
+    height: auto
+    padding: 20px 30px
+    max-width: 100%
+  .benefits
+    &__item
+      width: 100%
+  .prices__item
+    width: 100%
+    max-width: 300px
+  .check-form-sites__item
+    margin-right: 5px
+  .reviews__item
+    padding: 30px
+  .reviews-link-all, .articles-link-all
+    padding: 0
+    text-align: center
+  .callback-modal
+    padding: 30px
+  .three-items__item
+    width: calc(100% - 30px)
+  .we-check__right-item
+    width: 100%
+    margin: 0 0 15px
+
+@media (max-width: 500px)
+  .articles-items
+    padding: 0 50px
+  .team__item
+    width: calc(100% - 30px)
+
+@media (max-width: 400px)
+  .reviews-items .owl-nav button.owl-prev
+    left: 10px
+  .reviews-items .owl-nav button.owl-next
+    right: 10px
+  .articles-items
+    padding: 0 10px
+  .footer-social__header
+    width: 100%
+    margin: 0 0 10px
+    text-align: center
+  .callback-modal__header
+    padding: 0 30px

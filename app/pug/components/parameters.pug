@@ -1,0 +1,58 @@
+-
+  var parameters = {
+    header: 'Подбор авто экспертом – залог безопасности сделки',
+    subheader: 'Проверяем машины по следующим параметрам:',
+    items: [
+      {
+        img: 'img/parameters-01.png',
+        header: 'Аварии <br>и восстановление <br>после ДТП',
+        text: 'Тщательно осматриваем наружную и внутреннюю части – включая все силовые конструкции и элементы. Обычно у битых автомобилей нарушена геометрия кузова, отсутствуют подушки безопасности – из-за этого при ДТП  они могут причинить вред жизни и здоровью водителя с пассажирами'
+      },
+      {
+        img: 'img/parameters-02.png',
+        header: 'Кредиты, ограничения <br>и запреты',
+        text: 'Пробиваем автомобиль по различным базам, чтобы узнать оформляли ли на него залоги, кредиты или займы. Если у собственника остались долги перед финансовыми организациями – могут наложить запрет на регистрационные действия, у вас не получится оформить машину на себя'
+      },
+      {
+        img: 'img/parameters-03.png',
+        header: 'Скрученный <br>пробег',
+        text: 'Узнаем, уменьшен ли пробег машины - если да, то помимо переплаты вам удастся избежать неожиданных поломок. Так, когда километраж отличается от реального, не получится выполнить своевременное техобслуживание - что приведет к возникновению различных неисправностей'
+      },
+      {
+        img: 'img/parameters-04.png',
+        header: 'Технические неисправности',
+        text: 'Найдем то, что хотел скрыть предыдущий владелец – проблемы с двигателей и КПП, неисправности подвески и другие дефекты. На основании этого вы примите решение о том, хотите ли покупать данную машину – если да, то мы сможем аргументированно сбросить цену'
+      },
+      {
+        img: 'img/parameters-05.png',
+        header: 'Криминальное прошлое',
+        text: 'Проконтролируем юридическую чистоту машины – выясним, если она является угнанной, двойником или продается по поддельным документам. Благодаря чему сбережем ваши деньги – ведь в случае приобретения авто с криминальным прошлым вы попросту потеряете всю сумму'
+      },
+    ]
+  }
+
+.parameters#parameters
+  .container
+    .parameters__inner
+      h2.parameters__header !{parameters.header}
+      .parameters__subheader !{parameters.subheader}
+      .parameters-items
+        each item, index in parameters.items
+          if index === 0
+            .parameters__item.active(class="parameters__item_" + (index + 1))
+              .parameters__item-image-part
+                img.parameters__item-image(src=item.img, alt='')
+                .parameters__item-header !{item.header}
+              .parameters__item-text-part(style="display:block;") !{item.text}
+          else
+            .parameters__item(class="parameters__item_" + (index + 1))
+              .parameters__item-image-part
+                img.parameters__item-image(src=item.img, alt='')
+                .parameters__item-header !{item.header}
+              .parameters__item-text-part !{item.text}
+      .parameters-points
+        each item, index in parameters.items
+          if index === 0
+            .parameters__point.active(class="parameters__point_" + (index + 1))
+          else
+            .parameters__point(class="parameters__point_" + (index + 1))

@@ -1,0 +1,24 @@
+-
+  var inspection = {
+    header: 'Осмотр на подъемнике – БЕСПЛАТНО!',
+    text: 'при заказе первого, комплексного осмотра автомобиля',
+    button: 'Оставить заявку',
+    label: 'Разрешаю обработку',
+    privacyHref: '#',
+    privacyText: 'персональных данных'
+  }
+
+.inspection#inspection
+  .container
+    .inspection__inner
+      .inspection__left
+        h2.inspection__header !{inspection.header}
+        p.inspection__text !{inspection.text}
+      .inspection__right
+        form.inspection-form
+          input(type="hidden" name="act" value="inspection")
+          input.inspection-form__phone(type="text" name="phone" placeholder="Телефон *" required)
+          button.inspection-form__button.btn(type="submit") !{inspection.button}
+          label.inspection-form__label.privacy_label !{inspection.label} 
+            input(type="checkbox" required)
+            a(href=inspection.privacyHref) !{inspection.privacyText}
